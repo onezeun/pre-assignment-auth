@@ -4,7 +4,7 @@
 <br>
 
 ## 🔗 배포링크
-https://warm-heliotrope-3e78eb.netlify.app/login
+https://warm-heliotrope-3e78eb.netlify.app
 
 <br>
 
