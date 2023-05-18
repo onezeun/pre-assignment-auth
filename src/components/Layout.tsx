@@ -6,9 +6,7 @@ type LayoutProps = {
 };
 
 function Layout({ children }: LayoutProps) {
-  return (
-    <div className='wrap'>{children}</div>
-  );
+  return <div className="container">{children}</div>;
 }
 
 export default Layout;
