@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# 사용자 로그인 구현
+기업과제로 구현한 사용자 로그인 화면입니다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+## 🔗 배포링크
+https://warm-heliotrope-3e78eb.netlify.app/login
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+## ⚙ 실행방법
+```
+// 프로젝트 패키지 설치
+$ npm i
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+// 프로젝트 실행
+$ npm start
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br>
 
-### `npm test`
+## 📂 디렉토리 구조 
+```
+📦src
+ ┣ 📂components
+ ┃ ┗ 📜Layout.tsx
+ ┣ 📂hooks
+ ┃ ┗ 📜useValidation.tsx
+ ┣ 📂pages
+ ┃ ┣ 📜Login.tsx
+ ┃ ┗ 📜Main.tsx
+ ┣ 📂styles
+ ┃ ┣ 📜index.css
+ ┃ ┗ 📜Layout.css
+ ┣ 📜App.tsx
+ ┗ 📜index.tsx
+ ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ <br>
 
-### `npm run build`
+## 🔨 사용 기술 스택
+| 사용처 | 사용 기술 | 결정 사유 |
+| --- | --- | --- |
+| 프레임워크 | React (CRA) |  |
+| 언어 | Typescript(Javascript) | - 더 안정적인 코드 작성: 컴파일 과정에서 버그를 사전에 찾을 수 있음 <br /> - 개발 생산성 향상: 자동완성, 타입체크, 에러 표시 도구 제공 <br /> - 코드 가독성 향상: 개발자가 코드를 이해하고 유지보수하기 쉽게 만듦 |
+| 라우팅 처리 | react-router-dom |  |
+| 코드 포매팅 | ESLint |  |
+| 배포 | netlify | 정적 웹페이지를 간편하게 무료로 배포 가능 |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 💻 구현 사항
+- 로그인시 Local Storage에 로그인 정보 저장 후 메인페이지 이동
+- 유효성 검사 (validation 커스텀 훅으로 분리)
+  - ID : 메일형식
+  - PWD : 소문자, 대문자, 숫자 조합 (최소 1개씩) 시작문자는 알파벳
+- 로그아웃시 Local Storage 정보 삭제 후 로그인 페이지 이동
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p align="center"> <img width="700" src="https://github.com/onezeun/pre-assignment-login/assets/78632052/6fbad17f-ee11-40c5-bcec-9453016486cb"></p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
