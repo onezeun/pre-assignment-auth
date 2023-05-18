@@ -16,10 +16,10 @@ const uidValidation = (uid: string): ValidationResult => {
   } else return { valid: true, message: '' };
 };
 
-const pwValidation = (pw: string): ValidationResult => {
-  if (pw.length === 0) {
+const pwValidation = (pwd: string): ValidationResult => {
+  if (pwd.length === 0) {
     return { valid: false, message: '비밀번호를 입력해주세요' };
-  } else if (!PW_CHECK.test(pw)) {
+  } else if (!PW_CHECK.test(pwd)) {
     return { valid: false, message: '비밀번호 형식으로 입력해주세요' };
   } else return { valid: true, message: '' };
 };
